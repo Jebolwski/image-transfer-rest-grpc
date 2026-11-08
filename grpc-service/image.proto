@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package image;
+
+service ImageService {
+  // Tüm görüntü tek mesajda (ham bayt). Varsayılan 4 MB alma limiti nedeniyle
+  // sunucu ve istemcide max mesaj boyutu yükseltilmelidir.
+  rpc UploadUnary(ImageRequest) returns (ImageReply);
+
+  // Görüntü küçük parçalar (chunk) halinde akış olarak gönderilir.
+  rpc UploadStream(stream ImageChunk) returns (ImageReply);
+}
+
+message ImageRequest {
+  string filename = 1;
+  bytes data = 2;
+}
+
+message ImageChunk {
+  string filename = 1; // yalnızca ilk parçada dolu olması yeterli
+  bytes data = 2;
+}
+
+message ImageReply {
+  int64 size_bytes = 1;
+  string sha256 = 2;
+}
