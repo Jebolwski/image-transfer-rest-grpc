@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+# protoc çıktıları (Docker imajı oluşturulurken / smoke_test.py çalışınca üretilir)
+grpc-service/image_pb2.py
+grpc-service/image_pb2_grpc.py
+# büyük ham yakalamalar; gerekirse özet .json dosyaları takip edilir
+docs/pcap/*.pcapng
