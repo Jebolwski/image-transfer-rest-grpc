@@ -1,3 +1,8 @@
+<p align="right">
+
+[![Read in English](https://img.shields.io/badge/Read%20in-English-blue?style=for-the-badge)](readme.en.md)
+
+</p>
 # Mikroservis Mimarisinde Görüntü/Medya Aktarımı: REST (Base64) ve gRPC Karşılaştırması
 
 **Ders:** Temel Ağ Protokolleri
