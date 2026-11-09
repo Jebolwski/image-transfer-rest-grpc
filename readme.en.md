@@ -14,7 +14,7 @@
 
 ## Project Summary
 
-This project aims to compare the REST and gRPC protocols in terms of network performance and resource consumption when transferring large image files (1 MB, 5 MB and 10 MB tiger photos) between microservices. The size increase and the extra CPU/memory load caused by converting images to Base64 in REST will be compared against gRPC's ability to send raw binary data directly as a stream.
+This project aims to compare the REST and gRPC protocols in terms of network performance and resource consumption when transferring large image files (1 MB, 5 MB and 10 MB photos) between microservices. The size increase and the extra CPU/memory load caused by converting images to Base64 in REST will be compared against gRPC's ability to send raw binary data directly as a stream.
 
 ## Technologies Used
 
@@ -34,12 +34,12 @@ This project aims to compare the REST and gRPC protocols in terms of network per
 
 ## Work Plan
 
-| Week | Activity                                                                                                  |
-| :--- | :-------------------------------------------------------------------------------------------------------- |
-| 1    | Literature review; learning gRPC and Protocol Buffers; preparing the 1, 5 and 10 MB test images           |
-| 2    | Setting up the Docker Compose skeleton; finalizing the measurement protocol and metrics                   |
-| 3-4  | Developing the REST (Base64) service and the k6 scenario; early pilot Wireshark capture                   |
-| 5-6  | Developing the gRPC services (unary and streaming); message size limit and chunk size tuning              |
-| 7-8  | Running the full load tests; collecting pcap files and docker stats data                                  |
-| 9    | Analyzing the data; preparing charts and comparison tables                                                |
-| 10   | Completing the final report, the presentation and the GitHub repository                                   |
+| Week | Activity                                                                                        |
+| :--- | :---------------------------------------------------------------------------------------------- |
+| 1    | Literature review; learning gRPC and Protocol Buffers; preparing the 1, 5 and 10 MB test images |
+| 2    | Setting up the Docker Compose skeleton; finalizing the measurement protocol and metrics         |
+| 3-4  | Developing the REST (Base64) service and the k6 scenario; early pilot Wireshark capture         |
+| 5-6  | Developing the gRPC services (unary and streaming); message size limit and chunk size tuning    |
+| 7-8  | Running the full load tests; collecting pcap files and docker stats data                        |
+| 9    | Analyzing the data; preparing charts and comparison tables                                      |
+| 10   | Completing the final report, the presentation and the GitHub repository                         |
